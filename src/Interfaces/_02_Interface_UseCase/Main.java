@@ -1,5 +1,9 @@
 package Interfaces._02_Interface_UseCase;
 
+import Interfaces._01_baisc_interface.temp;
+
+
+
 public class Main
 {
     public static void main(String[] args) {

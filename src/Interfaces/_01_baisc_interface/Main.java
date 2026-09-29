@@ -1,20 +1,30 @@
 package Interfaces._01_baisc_interface;
 
-public class Main {
+interface tempo{
+    default void show(){
+        System.out.println("This is a interface 1 method");
+    }
+}
+
+interface tempo2{
+    default void show(){
+        System.out.println("This is a interface 2 method");
+    }
+}
+
+class tempo3 implements tempo2,tempo{
+    public void show(){
+        tempo2.super.show();
+    }
+}
+
+
+public class Main extends temp{
+
     public static void main(String[] args)
     {
-         temp t1 =  new temp();
-
-         t1.display();
-
-         //Final variable
-         System.out.println(t1.a);
-
-         //Default method
-         t1.show();
-
-         //static method
-        testInterface.bar();
+           tempo3 t = new tempo3();
+           t.show();
 
     }
 }
