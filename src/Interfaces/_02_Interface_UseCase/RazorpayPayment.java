@@ -1,6 +1,6 @@
 package Interfaces._02_Interface_UseCase;
 
-public class RazorpayPayment implements PaymentService
+public class RazorpayPayment extends PaymentService
 {
     @Override
     public void pay(double amount) {
