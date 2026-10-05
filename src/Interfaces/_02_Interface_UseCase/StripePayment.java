@@ -1,6 +1,6 @@
 package Interfaces._02_Interface_UseCase;
 
-public class StripePayment implements PaymentService{
+public class StripePayment extends PaymentService{
     @Override
     public void pay(double amount) {
         System.out.println("Stripe Payment - " + amount);

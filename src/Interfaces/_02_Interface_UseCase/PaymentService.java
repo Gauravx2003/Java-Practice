@@ -2,7 +2,7 @@ package Interfaces._02_Interface_UseCase;
 
 //A toned downed version of real life use case of interfaces
 
-public interface PaymentService
+abstract class PaymentService
 {
-     void pay(double amount);
+     abstract void pay(double amount);
 }

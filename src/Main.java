@@ -1,72 +1,55 @@
+import java.io.FileReader;
 import java.io.IOException;
-import java.util.HashMap;
+import java.util.*;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 
 
 
-class Student {
-    String name;
+class base{
+//    public base()
+//    {
+//        System.out.println("base");
+//    }
 
-    public Student(String name) {
-        this.name = name;
+    public base(int a){
+        System.out.println(a);
     }
+}
 
-    @Override
-    public int hashCode() {
-        return Integer.hashCode(this.name.hashCode());
+class child extends base{
+    public child()
+    {
+        super(0);
+        System.out.println("child");
     }
-
-    @Override
-    public boolean equals(Object obj) {
-        if(this==obj) return true;
-
-        if(!(obj instanceof Student)) return false;
-        Student other = (Student)obj;
-        return this.name.equals(other.name);
-    }
-
-    int add(int x , int b){
-        System.out.println("primitive method");
-        return x+b;
-    }
-
-    int add(Integer x , Integer b){
-        System.out.println("Object method");
-        return x+b;
-    }
-
-
 }
 
 public class Main {
+
+    Integer a;
+
+    void add(int a, int b){
+
+        System.out.println("Integer method");
+        System.out.println(a+b);
+    }
+
+    void add(int a, float b){
+        System.out.println("Integer and Float method");
+        System.out.println(a+b);
+    }
+
+    void add(double a, double b){
+        System.out.println("Integer and Double method");
+        System.out.println(a+b);
+    }
+
     public static void main(String[] args) {
 
-        HashMap<Student, String> mp = new HashMap<>(25);
+        Main m = new Main();
 
-        String str = "fusdfuwef";
-
-        Student s = new Student("gaurav");
-        mp.put(s,"daware");
-
-        Student s2 = new Student("gaurav");
-
-        System.out.println(s2.toString());
-
-        Integer a = 24;
-
-        System.out.println(a.toString());
-
-        s.add(Integer.valueOf(3),Integer.valueOf(5));
-
-//        System.out.println(mp.get(s2));
-//
-//        System.out.println(s.equals(s2));
-//
-//        System.out.println(s.hashCode() + " ," + s2.hashCode());
-
-
-
+        m.add(1f,1f);
     }
 }
